@@ -1,6 +1,6 @@
 ## Defines abbreviations
 function setup
-    for abbreviation in (abbr -1)
+    for abbreviation in (abbr -l)
         abbr -e $abbreviation
     end
     abbr gg git graph
