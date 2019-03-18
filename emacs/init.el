@@ -18,7 +18,8 @@
 
 ;; Personal libs
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(load-library "c.el")
 (load-library "packages.el")
+(load-library "c.el")
 (load-library "transparency.el")
 (load-library "latex.el")
+(load-library "centered-cursor.el")
