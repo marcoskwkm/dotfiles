@@ -12,7 +12,6 @@
 ;; List of packages to keep updated
 (setq package-list
       '(
-        centered-cursor-mode
         latex-preview-pane
         typescript-mode
         ))
