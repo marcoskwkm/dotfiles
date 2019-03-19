@@ -9,9 +9,14 @@
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
+;; Fixes free variable warnings
+(defvar langelem nil)
+
 ;; List of packages to keep updated
 (setq package-list
       '(
+        go-guru
+        go-mode
         latex-preview-pane
         typescript-mode
         ))
