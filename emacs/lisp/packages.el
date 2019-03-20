@@ -15,10 +15,17 @@
 ;; List of packages to keep updated
 (setq package-list
       '(
+        ;; JS
+        ag
+        js2-mode
+        xref-js2
+        ;; Typescript
+        typescript-mode
+        ;; Go
         go-guru
         go-mode
+        ;; Latex
         latex-preview-pane
-        typescript-mode
         ))
 
 ;; Activate all packages

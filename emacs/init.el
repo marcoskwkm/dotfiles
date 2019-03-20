@@ -4,6 +4,7 @@
 (load-library "c.el")
 (load-library "custom-functions.el")
 (load-library "go.el")
+(load-library "javascript.el")
 (load-library "latex.el")
 (load-library "transparency.el")
 (load-library "typescript.el")
