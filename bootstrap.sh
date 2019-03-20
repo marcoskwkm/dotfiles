@@ -1,5 +1,11 @@
 #!/bin/bash
 
+case $(uname -s) in
+    Linux*)  echo "Setting up for Linux..."; ENV="Linux";;
+    Darwin*) echo "Setting up for MacOS..."; ENV="Mac";;
+    *)       echo "Error: Unknown OS"; exit 1
+esac
+
 DIR=$(dirname "$0")
 cd "$DIR"
 
@@ -15,7 +21,7 @@ else
 fi
 
 # Package control must be executed first in order for the rest to work
-./packages/setup.sh
+./packages/$ENV/setup.sh
 
 find * -name "setup.sh" -not -wholename "packages*" | while read setup; do
     ./$setup

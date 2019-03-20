@@ -36,17 +36,4 @@
 (global-set-key (kbd "M-n") 'my-forward-sentence)
 (global-set-key (kbd "C-x t") 'toggle-window-split)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (latex-preview-pane go-guru tide tidal graphql-mode graphql go-mode exec-path-from-shell centered-cursor-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(delete-file "~/Library/Colors/Emacs.clr") ; Suppress emacs-26 Mojave error

@@ -2,7 +2,6 @@
 
 (setenv "GOPATH" "/Users/marcos/go")
 (add-to-list 'exec-path "/Users/marcos/go/bin")
-(load "~/emacs/go-guru.el")
 (when (fboundp 'go-mode)
   (defun go-config ()
     (local-set-key (kbd "M-.") 'godef-jump)

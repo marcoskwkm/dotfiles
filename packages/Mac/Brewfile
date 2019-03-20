@@ -1,0 +1,10 @@
+tap 'caskroom/cask'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'buo/cask-upgrade'
+
+brew 'fish'
+
+cask 'emacs'
+cask 'iterm2'
+cask 'spectacle'

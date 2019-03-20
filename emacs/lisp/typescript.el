@@ -1,3 +1,4 @@
+(require 'typescript-mode)
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
@@ -17,7 +18,6 @@
 
 (setq typescript-indent-level 2)
 (setq js-indent-level 2)
-(load "~/emacs/typescript.el")
 (when (fboundp 'typescript-mode)
   (defun ts-config ()
     (local-set-key (kbd "C-x r") 'tide-references)

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+FISH_PATH=$(which fish)
 DIR=$(dirname "$0")
 cd "$DIR"
 
@@ -15,10 +16,10 @@ set_fish_shell() {
         success "fish shell is already set up."
     else
         substep_info "Adding fish executable to /etc/shells..."
-        if grep --fixed-strings --line-regexp --quiet "/usr/bin/fish" /etc/shells; then
+        if grep --fixed-strings --line-regexp --quiet ${FISH_PATH} /etc/shells; then
             substep_success "Fish executable already exists in /etc/shells."
         else
-            if sudo bash -c "echo /usr/bin/bash >> /etc/shells"; then
+            if sudo bash -c "echo ${FISH_PATH} >> /etc/shells"; then
                 substep_success "Fish executable added to /etc/shells."
             else
                 substep_error "Failed adding fish executable to /etc/shells."
@@ -26,7 +27,7 @@ set_fish_shell() {
             fi
         fi
         substep_info "Changing shell to fish..."
-        if chsh -s /usr/bin/fish; then
+        if chsh -s ${FISH_PATH}; then
             substep_success "Successfully changed shell to fish."
         else
             substep_error "Failed changing shell to fish."
