@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 tap 'buo/cask-upgrade'
 
 brew 'fish'
+brew 'gdb'
 
 cask 'emacs'
 cask 'iterm2'
