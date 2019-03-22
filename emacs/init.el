@@ -37,18 +37,16 @@
 (global-set-key (kbd "M-n") 'my-forward-sentence)
 (global-set-key (kbd "C-x t") 'toggle-window-split)
 
+;; Backups and autosaves
+(setq temporary-file-dir "~/.emacs.d/backups/")
+(setq
+   backup-by-copying t
+   backup-directory-alist `(("." . ,temporary-file-dir))
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t
+   auto-save-file-name-transforms `((".*" ,temporary-file-dir t)))
+(setq auto-save-list-file-prefix nil) ; Don't generate ~/.emacs.d/auto-save-list/
+
 (delete-file "~/Library/Colors/Emacs.clr") ; Suppress emacs-26 Mojave error
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (xref-js2 typescript-mode latex-preview-pane js2-mode go-guru ag))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
