@@ -48,5 +48,6 @@
    version-control t
    auto-save-file-name-transforms `((".*" ,temporary-file-dir t)))
 (setq auto-save-list-file-prefix nil) ; Don't generate ~/.emacs.d/auto-save-list/
+(setq create-lockfiles nil)           ; Don't generate .#files
 
 (delete-file "~/Library/Colors/Emacs.clr") ; Suppress emacs-26 Mojave error
