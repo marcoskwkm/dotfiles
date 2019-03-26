@@ -25,6 +25,8 @@
 (global-set-key (kbd "M-p") 'my-backward-sentence)
 (global-set-key (kbd "M-n") 'my-forward-sentence)
 (global-set-key (kbd "C-x t") 'toggle-window-split)
+(global-set-key (kbd "s-[") 'previous-multiframe-window)
+(global-set-key (kbd "s-]") 'next-multiframe-window)
 
 ;; Backups and autosaves
 (setq temporary-file-dir "~/.emacs.d/backups/")
