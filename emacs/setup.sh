@@ -10,7 +10,7 @@ CONFIG_DST="$(realpath ~/.emacs.d)"
 
 info "Configuring emacs..."
 mkdir -p "$CONFIG_DST"
-mkdir -p "$CONFIG_DST/lisp"
+mkdir -p "$CONFIG_DST/config"
 
 find . -name "*.el" | while read fn; do
     symlink "$CONFIG_SRC/$fn" "$CONFIG_DST/$fn"

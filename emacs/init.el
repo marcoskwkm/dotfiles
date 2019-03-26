@@ -1,53 +1,66 @@
-;; Personal libs
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(load-library "packages.el")
-(load-library "c.el")
-(load-library "custom-functions.el")
-(load-library "go.el")
-(load-library "javascript.el")
-(load-library "latex.el")
-(load-library "transparency.el")
-(load-library "typescript.el")
+;;;;;;;;;;;;;;;;;;;;;;
+;; Package managing ;;
+;;;;;;;;;;;;;;;;;;;;;;
 
-(setq inhibit-startup-message t)
-(setq-default indent-tabs-mode nil
-              tab-width 4)
-(setq shell-command-switch "-lic")
-(global-linum-mode 1)
-(setq column-number-mode t)
-(global-hl-line-mode 1)
-(electric-indent-mode 1)
-(set-face-background 'default "#202020")
-(set-face-foreground 'default "White")
-(set-face-background 'hl-line "#003399")
-(set-face-attribute 'default nil :height 140) ; Starts emacs with C-x C-= (zoom in)
-(tool-bar-mode -1)
-(setq exec-path (append exec-path '("/usr/local/bin")))
-(global-auto-revert-mode t) ; Auto refreshes buffers on file change
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 
-;; Always split vertically
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
+;; Fixes free variable warnings
+(defvar langelem nil)
 
-;; Keybindings
-(global-unset-key "\C-z")
-(global-unset-key "\C-x\C-z")
-(global-set-key (kbd "C-c c") 'compile)
-(global-set-key (kbd "M-p") 'my-backward-sentence)
-(global-set-key (kbd "M-n") 'my-forward-sentence)
-(global-set-key (kbd "C-x t") 'toggle-window-split)
+;; List of packages to keep updated
+(setq package-list
+      '(
+        ;; Project management
+        projectile
+        ;; JS
+        ag
+        js2-mode
+        xref-js2
+        ;; Typescript
+        typescript-mode
+        ;; Go
+        go-guru
+        go-mode
+        ;; Latex
+        latex-preview-pane
+        ))
 
-;; Backups and autosaves
-(setq temporary-file-dir "~/.emacs.d/backups/")
-(setq
-   backup-by-copying t
-   backup-directory-alist `(("." . ,temporary-file-dir))
-   delete-old-versions t
-   kept-new-versions 6
-   kept-old-versions 2
-   version-control t
-   auto-save-file-name-transforms `((".*" ,temporary-file-dir t)))
-(setq auto-save-list-file-prefix nil) ; Don't generate ~/.emacs.d/auto-save-list/
-(setq create-lockfiles nil)           ; Don't generate .#files
+;; Activate all packages
+(package-initialize)
 
-(delete-file "~/Library/Colors/Emacs.clr") ; Suppress emacs-26 Mojave error
+;; Fetch the list of available packages
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; Install missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;;;;;;;;;;;;;;;;;;
+;; Config files ;;
+;;;;;;;;;;;;;;;;;;
+
+(defun load-directory (dir)
+  "Load all `.el' files in directory."
+  (dolist (path (directory-files dir))
+    (cond ((and (>= (length path) 3) (string= (substring path -3) ".el"))
+	       (load-file (concat dir path))))))
+
+(load-directory "~/.emacs.d/config/")
+
+;;;;;;;;;;;;;;;;
+;; Other shit ;;
+;;;;;;;;;;;;;;;;
+
+;; Suppress emacs-26 Mojave error
+(delete-file "~/Library/Colors/Emacs.clr") 
