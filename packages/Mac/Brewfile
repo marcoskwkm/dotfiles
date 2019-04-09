@@ -5,6 +5,7 @@ tap 'buo/cask-upgrade'
 
 brew 'fish'
 brew 'gdb'
+brew 'yarn'
 
 cask 'emacs'
 cask 'iterm2'
