@@ -4,4 +4,5 @@ function setup
         abbr -e $abbreviation
     end
     abbr gg git graph
+    abbr gs git status
 end
