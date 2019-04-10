@@ -54,13 +54,13 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 769 620 392 0 0 2560 1418 </string>
+	<string>3090 215 620 392 2560 -262 1680 1028 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>2708 -188 606 469 2560 -262 1680 1028 </string>
+	<string>269 194 609 401 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>219 252 918 452 0 0 2560 1418 </string>
+	<string>447 726 1016 512 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2560 -262 1680 1028 2560 -262 1680 1028 </string>
+	<string>0 0 2560 1418 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>343 181 730 552 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
@@ -645,7 +645,7 @@
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
@@ -748,7 +748,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/marcos/dotfiles/iterm2</string>
+	<string>/Users/marcos/repos/dotfiles-vtex/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -762,7 +762,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-03-21T04:43:05Z</date>
+	<date>2019-04-09T00:22:09Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -776,7 +776,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.7</string>
+	<string>3.2.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
