@@ -1,3 +1,25 @@
+function parse_vtex_json
+  cat $HOME/.config/configstore/vtex.json | grep $argv[1] | sed -n 's/.*\:.*\"\(.*\)\".*/\1/p'
+end
+
+function get_vtex_account
+  parse_vtex_json account
+end
+
+function get_vtex_env
+  parse_vtex_json '"env"'
+end
+
+function get_vtex_workspace
+  parse_vtex_json workspace
+end
+
+function prompt_vtex
+  if test (get_vtex_workspace 2> /dev/null)
+    echo (get_vtex_env):(get_vtex_account)/(get_vtex_workspace)
+  end
+end
+
 function fish_prompt --description 'Write out the prompt'
 	set -l last_status $status
 
@@ -87,5 +109,9 @@ function fish_prompt --description 'Write out the prompt'
 		)
 	end
 
-	echo -n -s (set_color $fish_color_user) "$USER" $normal @ (set_color $fish_color_host) "$__fish_prompt_hostname" $normal ' ' (set_color $color_cwd) (prompt_pwd) $normal (__fish_git_prompt) $normal $prompt_status "$mode_str" "> "
+	if test (prompt_vtex)
+      set vtex ' ['(prompt_vtex)']'
+    end
+
+    echo -n -s (set_color $color_cwd) (prompt_pwd) $normal (__fish_git_prompt) $normal $vtex $prompt_status "$mode_str" "> "
 end

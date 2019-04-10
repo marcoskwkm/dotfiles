@@ -1,4 +1,9 @@
-# Emacs crap
+# Emacs backup file
 *~
-.#*
-*#
+**/#*#
+
+# Emacs Tide config file
+**/tsfmt.json
+
+# OS X shit
+.DS_Store
