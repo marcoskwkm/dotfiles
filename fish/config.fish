@@ -7,3 +7,6 @@ set -x -g LANG en_US.UTF-8
 
 # Personal binaries
 set PATH ~/bin $PATH
+
+# Aliases
+alias kubectl "env KUBECONFIG=(ls ~/.kube/configs/* | tr '\n' ':' | sed 's/:\$//g') kubectl"
