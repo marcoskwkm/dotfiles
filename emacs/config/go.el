@@ -1,0 +1,12 @@
+(require 'go-guru)
+
+(setenv "GOPATH" "/Users/marcos/go")
+(add-to-list 'exec-path "/Users/marcos/go/bin")
+(when (fboundp 'go-mode)
+  (defun go-config ()
+    (local-set-key (kbd "M-.") 'godef-jump)
+    (local-set-key (kbd "M-*") 'pop-tag-mark)
+    (local-set-key (kbd "C-x r") 'go-guru-referrers)
+  )
+  (add-hook 'go-mode-hook 'go-config)
+)
