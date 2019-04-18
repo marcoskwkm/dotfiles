@@ -1,5 +1,5 @@
 function emacs
-  command /Applications/Emacs.app/Contents/MacOS/Emacs $argv &
+  emacs26 $argv &
 end
 
 # Common typos
