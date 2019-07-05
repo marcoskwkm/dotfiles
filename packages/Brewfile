@@ -33,6 +33,7 @@ brew 'imagemagick'
 brew 'ack'
 brew 'tree'
 brew 'fzf'
+brew 'ripgrep'
 
 cask 'bartender'
 cask 'vivaldi'
