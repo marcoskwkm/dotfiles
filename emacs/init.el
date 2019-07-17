@@ -25,6 +25,7 @@
         ag
         js2-mode
         xref-js2
+        web-mode
         ;; Typescript
         typescript-mode
         ;; Go
@@ -64,3 +65,17 @@
 
 ;; Suppress emacs-26 Mojave error
 (delete-file "~/Library/Colors/Emacs.clr")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (web-mode xref-js2 tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
