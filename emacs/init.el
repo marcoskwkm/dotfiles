@@ -28,6 +28,8 @@
         web-mode
         ;; Typescript
         typescript-mode
+        company
+        tide
         ;; Go
         go-guru
         go-mode

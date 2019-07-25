@@ -1,4 +1,7 @@
 (require 'typescript-mode)
+(require 'web-mode)
+(require 'flycheck)
+(require 'company)
 
 ;; Makes typescript-mode derive from prog-mode
 (put 'typescript-mode 'derived-mode-parent 'prog-mode)
@@ -28,3 +31,11 @@
   )
   (add-hook 'typescript-mode-hook 'ts-config)
 )
+
+;; TSX support
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "tsx" (file-name-extension buffer-file-name))
+              (setup-tide-mode))))
+(flycheck-add-mode 'typescript-tslint 'web-mode)
