@@ -12,9 +12,11 @@ info "Setting up fish shell..."
 
 substep_info "Creating fish config folders..."
 mkdir -p "$DESTINATION/functions"
+mkdir -p "$DESTINATION/functions/scripts"
 mkdir -p "$DESTINATION/completions"
 
-find * -name "*.fish" -o -name "fishfile" | while read fn; do
+
+find * -name "*.fish" -o -name "fishfile" -o -name "*-script.*" | while read fn; do
     symlink "$SOURCE/$fn" "$DESTINATION/$fn"
 done
 clear_broken_symlinks "$DESTINATION"
@@ -51,4 +53,3 @@ if set_fish_shell; then
 else
     error "Failed setting up fish shell."
 fi
-
