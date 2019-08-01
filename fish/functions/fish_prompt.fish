@@ -10,13 +10,9 @@ function get_vtex_workspace
   parse_vtex_json workspace
 end
 
-function get_vtex_app
-  pwd | python ~/.config/fish/functions/scripts/get-app-script.py
-end  
-
 function prompt_vtex
   if test (get_vtex_workspace 2> /dev/null)
-    echo (get_vtex_account)/(get_vtex_workspace)(get_vtex_app)
+    echo (get_vtex_account)/(get_vtex_workspace)
   end
 end
 
