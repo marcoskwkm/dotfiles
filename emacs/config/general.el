@@ -9,7 +9,6 @@
 (set-face-background 'default "#202020")
 (set-face-foreground 'default "White")
 (set-face-background 'hl-line "#003399")
-;(set-face-attribute 'default nil :height 140) ; Starts emacs with C-x C-= (zoom in)
 (tool-bar-mode -1)
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (global-auto-revert-mode t) ; Auto refreshes buffers on file change
