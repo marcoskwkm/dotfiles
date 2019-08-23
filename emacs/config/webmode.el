@@ -7,7 +7,8 @@
   "Hooks for Web mode.  Adjust indent."
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
-  (setq web-mode-css-offset 2))
+  (setq web-mode-css-offset 2)
+  (setq web-mode-enable-auto-quoting nil))
 
 (add-hook 'web-mode-hook  'web-mode-init-hook)
 (add-hook 'web-mode-hook #'setup-tide-mode)

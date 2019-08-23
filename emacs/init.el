@@ -19,6 +19,8 @@
 ;; List of packages to keep updated
 (setq package-list
       '(
+        ;; Emacs stuff
+        exec-path-from-shell
         ;; Project management
         projectile
         ;; JS
@@ -48,6 +50,13 @@
   (unless (package-installed-p package)
     (package-install package)))
 
+;;;;;;;;;;;;;;;;;
+;; Emacs setup ;;
+;;;;;;;;;;;;;;;;;
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 ;;;;;;;;;;;;;;;;;;
 ;; Config files ;;
 ;;;;;;;;;;;;;;;;;;
@@ -73,7 +82,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (web-mode tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))))
+    (flycheck web-mode tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
