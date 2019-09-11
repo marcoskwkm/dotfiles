@@ -25,7 +25,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<integer>1</integer>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Downloads</string>
+	<string>~/Google Drive/Images</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -78,7 +78,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 2560 1417 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2560 -262 1680 1027 2560 -262 1680 1027 </string>
+	<string>0 379 1198 798 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 0 2560 1417 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -249,6 +249,8 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
+			<key>Background Image Location</key>
+			<string>/Users/marcos/Google Drive/Images/kotobomb.png</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -265,7 +267,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.20612717461340208</real>
+			<real>0.17862032860824739</real>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -663,7 +665,7 @@
 			<key>Normal Font</key>
 			<string>Monaco 15</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<false/>
+			<true/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -910,7 +912,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.18465061865482235</real>
+			<real>0.90000000000000002</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -935,23 +937,25 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.2</string>
 		<string>3.2.9</string>
-		<string>3.3.0</string>
 		<string>3.3.1</string>
+		<string>3.3.0</string>
+		<string>3.3.3</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{1520, 1054}</string>
+		<string>{871, 1136}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>02869BA8-6B9A-40BB-BEE0-5A499050392F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>3</integer>
+	<integer>6</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>586447043.20948005</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -1388,6 +1392,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>number</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.hostname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1693,6 +1705,8 @@
 	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -1702,11 +1716,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-20T03:40:59Z</date>
+	<date>2019-09-10T18:49:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
+	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -8789,7 +8803,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.1</string>
+	<string>3.3.3</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
