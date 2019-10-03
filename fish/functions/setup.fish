@@ -7,6 +7,7 @@ function setup
     abbr gg git graph
     abbr gs git status
     abbr ga git commit --amend
+    abbr gp git pull
     abbr vl vtex link --verbose --unsafe
     abbr vu vtex unlink
     abbr vwr vtex workspace reset
