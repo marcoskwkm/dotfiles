@@ -19,13 +19,6 @@
   (flycheck-mode +1)
   (setq flycheck-check-syntax-automatically '(save mode-enabled)))
 
-(when (fboundp 'typescript-mode)
-  (add-hook 'typescript-mode-hook 'set-tide-keybinds)
-  (add-hook 'typescript-mode-hook 'setup-flycheck))
-
-;; TSX support
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-
 (defun lunaryorn-use-js-executables-from-node-modules ()
   "Set executables of JS checkers from local node modules."
   (-when-let* ((file-name (buffer-file-name))
@@ -41,10 +34,18 @@
                (expand-file-name (concat "bin/" module ".js")
                                  package-directory)))))))
 
+
+(when (fboundp 'typescript-mode)
+  (add-hook 'typescript-mode-hook
+            (lambda ()
+              (set-tide-keybinds)
+              (lunaryorn-use-js-executables-from-node-modules)
+              (flycheck-add-mode 'javascript-eslint 'typescript-mode)
+              (setup-flycheck))))
+
 (add-hook 'web-mode-hook
           (lambda ()
-            (when (string-equal "tsx" (file-name-extension buffer-file-name))
-              (setup-tide-mode)
-              (lunaryorn-use-js-executables-from-node-modules)
-              (flycheck-add-mode 'javascript-eslint 'web-mode)
-              (setup-flycheck))))
+            (setup-tide-mode)
+            (lunaryorn-use-js-executables-from-node-modules)
+            (flycheck-add-mode 'javascript-eslint 'web-mode)
+            (setup-flycheck)))

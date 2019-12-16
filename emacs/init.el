@@ -88,7 +88,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (json-mode add-node-modules-path prettier-js flycheck web-mode tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))))
+    (coffee-mode json-mode add-node-modules-path prettier-js flycheck web-mode tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
