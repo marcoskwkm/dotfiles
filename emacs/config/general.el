@@ -33,6 +33,7 @@
 (global-set-key (kbd "C-x t") 'toggle-window-split)
 (global-set-key (kbd "s-[") 'previous-multiframe-window)
 (global-set-key (kbd "s-]") 'next-multiframe-window)
+(global-set-key (kbd "<C-tab>") 'other-frame)
 
 ;; Backups and autosaves
 (setq temporary-file-dir "~/.emacs.d/backups/")
