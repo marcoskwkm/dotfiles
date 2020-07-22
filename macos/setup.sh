@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 # Taken from rkalis/dotfiles
 
-COMPUTER_NAME=planeptune
+COMPUTER_NAME=lastation
 DIR=$(dirname "$0")
 cd "$DIR"
 
