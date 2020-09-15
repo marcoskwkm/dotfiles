@@ -34,6 +34,7 @@
 (global-set-key (kbd "s-[") 'previous-multiframe-window)
 (global-set-key (kbd "s-]") 'next-multiframe-window)
 (global-set-key (kbd "<C-tab>") 'other-frame)
+(global-set-key (kbd "M-k") 'hs-toggle-hiding)
 
 ;; Backups and autosaves
 (setq temporary-file-dir "~/.emacs.d/backups/")
