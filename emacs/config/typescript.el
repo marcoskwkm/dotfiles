@@ -41,11 +41,6 @@
               (set-tide-keybinds)
               (lunaryorn-use-js-executables-from-node-modules)
               (flycheck-add-mode 'javascript-eslint 'typescript-mode)
-              (setup-flycheck))))
-
-(add-hook 'web-mode-hook
-          (lambda ()
-            (setup-tide-mode)
-            (lunaryorn-use-js-executables-from-node-modules)
-            (flycheck-add-mode 'javascript-eslint 'web-mode)
-            (setup-flycheck)))
+              (setup-flycheck)
+              (add-node-modules-path)
+              (prettier-js-mode))))
