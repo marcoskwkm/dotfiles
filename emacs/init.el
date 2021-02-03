@@ -23,6 +23,7 @@
         exec-path-from-shell
         add-node-modules-path
         fzf
+        ivy
         ;; Utilities
         ripgrep
         ;; Project management
@@ -92,8 +93,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (elpy fzf ripgrep json-mode add-node-modules-path prettier-js flycheck web-mode tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))))
+   '(ivy elpy fzf ripgrep json-mode add-node-modules-path prettier-js flycheck web-mode tide tidal projectile latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
