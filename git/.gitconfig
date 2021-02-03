@@ -3,7 +3,7 @@
 	email = marcoskwkm@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = emacs
+	editor = "arch -x86_64 emacs"
 	ignorecase = false
 [color]
 	ui = true

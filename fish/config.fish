@@ -14,3 +14,7 @@ alias kubectl "env KUBECONFIG=(ls ~/.kube/configs/* | tr '\n' ':' | sed 's/:\$//
 # Go shit
 set GOPATH ~/go
 set PATH $PATH $GOPATH/bin
+
+# Homebrew on M1
+set PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
+
