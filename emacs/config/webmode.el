@@ -32,4 +32,5 @@
     '(progn
        (add-hook 'web-mode-hook #'add-node-modules-path)
        (add-hook 'web-mode-hook #'prettier-js-mode)
-       (add-hook 'web-mode-hook 'hs-minor-mode))) ;; Activates hide-show mode (for folding)
+       (add-hook 'web-mode-hook 'hs-minor-mode) ;; Activates hide-show mode (for folding)
+       (add-hook 'web-mode-hook 'flycheck-mode)))
