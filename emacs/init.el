@@ -24,6 +24,7 @@
         add-node-modules-path
         fzf
         ivy
+        company
         ;; Utilities
         ripgrep
         ;; Project management
@@ -35,7 +36,6 @@
         prettier-js
         ;; Typescript
         typescript-mode
-        company
         tide
         ;; Go
         go-guru

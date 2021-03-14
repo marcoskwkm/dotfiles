@@ -37,6 +37,10 @@
 (global-set-key (kbd "<C-tab>") 'other-frame)
 (global-set-key (kbd "M-k") 'hs-toggle-hiding)
 
+;; Company (autocomplete)
+(setq company-idle-delay 0.01)
+(setq company-minimum-prefix-length 1)
+
 ;; Backups and autosaves
 (setq temporary-file-dir "~/.emacs.d/backups/")
 (setq
