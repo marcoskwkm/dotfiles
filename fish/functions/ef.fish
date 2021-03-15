@@ -1,3 +1,6 @@
 function ef
-  emacs (fzf)
+  set path (fzf)
+  if test -n "$path"
+    emacs $path
+  end
 end
