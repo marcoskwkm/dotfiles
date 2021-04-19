@@ -14,3 +14,6 @@ alias kubectl "env KUBECONFIG=(ls ~/.kube/configs/* | tr '\n' ':' | sed 's/:\$//
 # Go shit
 set GOPATH ~/go
 set PATH $PATH $GOPATH/bin
+
+# emscripten
+set PATH /Users/marcos/tmp/emsdk /Users/marcos/tmp/emsdk/node/14.15.5_64bit/bin /Users/marcos/tmp/emsdk/upstream/emscripten $PATH
