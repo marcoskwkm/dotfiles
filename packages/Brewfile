@@ -31,6 +31,7 @@ brew 'ack'
 brew 'tree'
 brew 'fzf'
 brew 'ripgrep'
+brew 'clang-format'
 
 cask 'java8'
 cask 'the-unarchiver'

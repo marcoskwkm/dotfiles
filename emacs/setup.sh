@@ -12,6 +12,8 @@ info "Configuring emacs..."
 mkdir -p "$CONFIG_DST"
 mkdir -p "$CONFIG_DST/config"
 
+symlink "$CONFIG_SRC/.clang-format" "$(realpath ~/.clang-format)"
+
 find . -name "*.el" | while read fn; do
     symlink "$CONFIG_SRC/$fn" "$CONFIG_DST/$fn"
 done
