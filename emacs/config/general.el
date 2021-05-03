@@ -14,6 +14,7 @@
 (tool-bar-mode -1)
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (global-auto-revert-mode t) ; Auto refreshes buffers on file change
+(electric-pair-mode 1) ; Auto close brackets
 
 ;; Delete trailing whitespaces on save
 (add-hook 'before-save-hook 'my-prog-nuke-trailing-whitespace)
