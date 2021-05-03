@@ -3,5 +3,6 @@ Language:        Cpp
 # BasedOnStyle:  LLVM
 ColumnLimit: 100
 IndentWidth: 4
+SpaceAfterTemplateKeyword: false
 ...
 
