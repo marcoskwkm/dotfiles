@@ -1,8 +1,11 @@
 ---
-Language:        Cpp
-# BasedOnStyle:  LLVM
+Language: Cpp
 ColumnLimit: 100
 IndentWidth: 4
 SpaceAfterTemplateKeyword: false
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: WithoutElse
+AllowShortLoopsOnASingleLine: true
+SpaceBeforeRangeBasedForLoopColon: false
+Standard: c++17
 ...
-
