@@ -12,6 +12,8 @@
   (flycheck-mode +1)
   (flycheck-select-checker 'c/c++-gcc))
 
+(add-hook 'c++-mode-hook 'company-mode)
+
 (add-hook 'c++-mode-hook
           (lambda ()
             (setup-clang-formatter)

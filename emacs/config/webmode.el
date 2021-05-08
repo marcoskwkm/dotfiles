@@ -29,8 +29,9 @@
                              (enable-minor-mode
                               '("\\.(jsx?|tsx?)\\'" . prettier-js-mode))))
 (eval-after-load 'web-mode
-    '(progn
-       (add-hook 'web-mode-hook #'add-node-modules-path)
-       (add-hook 'web-mode-hook #'prettier-js-mode)
-       (add-hook 'web-mode-hook 'hs-minor-mode) ;; Activates hide-show mode (for folding)
-       (add-hook 'web-mode-hook 'flycheck-mode)))
+  '(progn
+     (add-hook 'web-mode-hook 'company-mode)
+     (add-hook 'web-mode-hook #'add-node-modules-path)
+     (add-hook 'web-mode-hook #'prettier-js-mode)
+     (add-hook 'web-mode-hook 'hs-minor-mode) ;; Activates hide-show mode (for folding)
+     (add-hook 'web-mode-hook 'flycheck-mode)))
