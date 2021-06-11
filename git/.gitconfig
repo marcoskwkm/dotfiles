@@ -24,3 +24,5 @@
 	uncommit = reset --soft HEAD~
 [branch]
 	autosetupmerge = always
+[init]
+	defaultBranch = main
