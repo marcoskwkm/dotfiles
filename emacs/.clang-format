@@ -3,9 +3,10 @@ Language: Cpp
 ColumnLimit: 100
 IndentWidth: 4
 SpaceAfterTemplateKeyword: false
-AllowShortBlocksOnASingleLine: Always
-AllowShortIfStatementsOnASingleLine: WithoutElse
-AllowShortLoopsOnASingleLine: true
+AlignTrailingComments: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
 SpaceBeforeRangeBasedForLoopColon: false
 Standard: c++17
 ...
