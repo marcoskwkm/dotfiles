@@ -6,7 +6,9 @@
   ;; company is an optional dependency. You have to
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
-  (company-mode +1))
+  (company-mode +1)
+  (flycheck-disable-checker 'typescript-tslint)
+  (flycheck-add-next-checker 'tsx-tide 'javascript-eslint))
 
 (defun set-tide-keybinds ()
   (interactive)

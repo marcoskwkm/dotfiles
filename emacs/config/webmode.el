@@ -49,7 +49,6 @@
 
 (defun enable-flycheck ()
   (lunaryorn-use-js-executables-from-node-modules)
-  (flycheck-select-checker 'javascript-eslint)
   (flycheck-mode))
 
 (eval-after-load 'web-mode
