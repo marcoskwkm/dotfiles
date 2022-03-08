@@ -56,7 +56,7 @@
 (setq create-lockfiles nil)           ; Don't generate .#files
 
 ;; Fixes ansi colors in compilation mode
-(require 'ansi-color)
-(defun colorize-compilation-buffer ()
-  (ansi-color-apply-on-region compilation-filter-start (point)))
-(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+;; (require 'ansi-color)
+;; (defun colorize-compilation-buffer ()
+;;   (ansi-color-apply-on-region compilation-filter-start (point)))
+;; (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)

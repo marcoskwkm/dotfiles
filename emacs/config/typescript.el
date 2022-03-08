@@ -43,4 +43,5 @@
               (flycheck-add-mode 'javascript-eslint 'typescript-mode)
               (setup-flycheck)
               (add-node-modules-path)
+              (eslint-fix-auto-mode)
               (prettier-js-mode))))

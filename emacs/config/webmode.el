@@ -56,5 +56,6 @@
      (add-hook 'web-mode-hook 'company-mode)
      (add-hook 'web-mode-hook #'add-node-modules-path)
      (add-hook 'web-mode-hook #'prettier-js-mode)
+     (add-hook 'web-mode-hook 'eslint-fix-auto-mode)
      (add-hook 'web-mode-hook 'hs-minor-mode) ;; Activates hide-show mode (for folding)
      (add-hook 'web-mode-hook 'enable-flycheck)))
