@@ -19,4 +19,4 @@ set PATH $PATH $GOPATH/bin
 set PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
 
 # emscripten
-set PATH /Users/marcos/tmp/emsdk /Users/marcos/tmp/emsdk/node/14.15.5_64bit/bin /Users/marcos/tmp/emsdk/upstream/emscripten $PATH
+set PATH /Users/marcos/tmp/emsdk /Users/marcos/tmp/emsdk/upstream/emscripten $PATH
