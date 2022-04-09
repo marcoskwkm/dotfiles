@@ -56,7 +56,8 @@
 (setq create-lockfiles nil)           ; Don't generate .#files
 
 ;; Fixes ansi colors in compilation mode
-;; (require 'ansi-color)
-;; (defun colorize-compilation-buffer ()
-;;   (ansi-color-apply-on-region compilation-filter-start (point)))
-;; (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+(require 'xterm-color)
+(setq compilation-environment '("TERM=xterm-256color"))
+(defun my/advice-compilation-filter (f proc string)
+  (funcall f proc (xterm-color-filter string)))
+(advice-add 'compilation-filter :around #'my/advice-compilation-filter)
