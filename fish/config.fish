@@ -20,3 +20,7 @@ set PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
 
 # emscripten
 set PATH /Users/marcos/tmp/emsdk /Users/marcos/tmp/emsdk/upstream/emscripten $PATH
+
+# pyenv
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
