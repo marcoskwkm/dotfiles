@@ -20,4 +20,9 @@ find . -name "*.el" | while read fn; do
 done
 clear_broken_symlinks "$CONFIG_DST"
 
+if [ ! -d "$CONFIG_DST/unity" ]; then
+    cd "$CONFIG_DST"
+    git clone git@github.com:elizagamedev/unity.el unity
+fi
+
 success "Finished configuring emacs."

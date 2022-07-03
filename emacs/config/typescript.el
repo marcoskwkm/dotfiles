@@ -1,8 +1,11 @@
-(require 'typescript-mode)
+(require 'web-mode)
 (require 'lsp)
 
-(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$" . typescript-mode))
+(setq lsp-tailwindcss-add-on-mode t)
+(require 'lsp-tailwindcss)
+
+(add-to-list 'auto-mode-alist '("\\.tsx?$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
 
 (defun lunaryorn-use-js-executables-from-node-modules ()
   "Set executables of JS checkers from local node modules."
@@ -20,17 +23,22 @@
                                  package-directory)))))))
 
 (defun mode-config ()
-  (setq typescript-indent-level 2))
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
 
-(defun lsp-config ()
+(defun setup-lsp ()
   (setq-local lsp-ui-doc-show-with-cursor t)
-  (setq-local lsp-ui-sideline-enable nil))
+  (setq-local lsp-ui-sideline-enable nil)
+  (setf (alist-get 'web-mode lsp--formatting-indent-alist) 'web-mode-code-indent-offset)
+  (setq-local lsp-clients-typescript-server-args '("--stdio" "--tsserver-log-file" "/dev/stderr"))
+  (lsp))
 
-(add-hook 'typescript-mode-hook (lambda ()
-                                  (mode-config)
-                                  (lsp-config)
-                                  (lsp)
-                                  (yas-minor-mode)
-                                  (prettier-js-mode)
-                                  (add-node-modules-path)
-                                  (lunaryorn-use-js-executables-from-node-modules)))
+(add-hook 'web-mode-hook (lambda ()
+                           (mode-config)
+                           (setup-lsp)
+                           (yas-minor-mode)
+                           (prettier-js-mode)
+                           (eslint-fix-auto-mode)
+                           (add-node-modules-path)
+                           (lunaryorn-use-js-executables-from-node-modules)))
