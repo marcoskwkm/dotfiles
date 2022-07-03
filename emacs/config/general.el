@@ -10,7 +10,7 @@
 (set-face-background 'default "#202020")
 (set-face-foreground 'default "White")
 (set-face-background 'hl-line "#003399")
-(set-face-attribute 'default nil :height 180) ; Starts emacs with C-x C-= (zoom in)
+;(set-face-attribute 'default nil :height 180) ; Starts emacs with C-x C-= (zoom in)
 (tool-bar-mode -1)
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (global-auto-revert-mode t) ; Auto refreshes buffers on file change
@@ -37,6 +37,7 @@
 (global-set-key (kbd "s-]") 'next-multiframe-window)
 (global-set-key (kbd "<C-tab>") 'other-frame)
 (global-set-key (kbd "M-k") 'hs-toggle-hiding)
+(global-set-key (kbd "M-s-j") 'ivy-immediate-done)
 
 ;; Company (autocomplete)
 (setq company-idle-delay 0.01)
@@ -61,3 +62,10 @@
 (defun my/advice-compilation-filter (f proc string)
   (funcall f proc (xterm-color-filter string)))
 (advice-add 'compilation-filter :around #'my/advice-compilation-filter)
+
+;; Adds "insert-lib-file" interactive function
+(defun insert-lib-file ()
+  "Inserts file from personal code library"
+  (interactive)
+  (let ((default-directory "~/repos/code/libv3"))
+    (call-interactively 'insert-file)))

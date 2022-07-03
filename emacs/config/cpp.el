@@ -20,3 +20,5 @@
 
 (add-hook 'c++-mode-hook 'lsp)
 (add-hook 'c++-mode-hook 'yas-minor-mode)
+
+(setf (lsp-session-folders-blacklist (lsp-session)) nil)

@@ -1,23 +1,8 @@
 (require 'typescript-mode)
-(require 'web-mode)
-(require 'flycheck)
-(require 'company)
+(require 'lsp)
 
-(require 'tide-setup "~/.emacs.d/config/tide-setup.el")
-
-;; Makes typescript-mode derive from prog-mode
-(put 'typescript-mode 'derived-mode-parent 'prog-mode)
-
-;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
-
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
-(setq typescript-indent-level 2)
-(setq js-indent-level 2)
-
-(defun setup-flycheck ()
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled)))
+(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . typescript-mode))
 
 (defun lunaryorn-use-js-executables-from-node-modules ()
   "Set executables of JS checkers from local node modules."
@@ -34,14 +19,18 @@
                (expand-file-name (concat "bin/" module ".js")
                                  package-directory)))))))
 
+(defun mode-config ()
+  (setq typescript-indent-level 2))
 
-(when (fboundp 'typescript-mode)
-  (add-hook 'typescript-mode-hook
-            (lambda ()
-              (set-tide-keybinds)
-              (lunaryorn-use-js-executables-from-node-modules)
-              (flycheck-add-mode 'javascript-eslint 'typescript-mode)
-              (setup-flycheck)
-              (add-node-modules-path)
-              (eslint-fix-auto-mode)
-              (prettier-js-mode))))
+(defun lsp-config ()
+  (setq-local lsp-ui-doc-show-with-cursor t)
+  (setq-local lsp-ui-sideline-enable nil))
+
+(add-hook 'typescript-mode-hook (lambda ()
+                                  (mode-config)
+                                  (lsp-config)
+                                  (lsp)
+                                  (yas-minor-mode)
+                                  (prettier-js-mode)
+                                  (add-node-modules-path)
+                                  (lunaryorn-use-js-executables-from-node-modules)))
