@@ -23,15 +23,19 @@
                                  package-directory)))))))
 
 (defun mode-config ()
+  (setq gc-cons-threshold (* 1024 1024 1024)) ;; 1GB
+  (setq read-process-output-max (* 300 1024 1024)) ;; 300MB
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-enable-auto-quoting nil))
 
 (defun setup-lsp ()
   (setq-local lsp-ui-doc-show-with-cursor t)
   (setq-local lsp-ui-sideline-enable nil)
   (setf (alist-get 'web-mode lsp--formatting-indent-alist) 'web-mode-code-indent-offset)
   (setq-local lsp-clients-typescript-server-args '("--stdio" "--tsserver-log-file" "/dev/stderr"))
+  (setq-local lsp-clients-typescript-max-ts-server-memory 2048)
   (lsp))
 
 (add-hook 'web-mode-hook (lambda ()

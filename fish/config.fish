@@ -24,3 +24,5 @@ set PATH /Users/marcos/tmp/emsdk /Users/marcos/tmp/emsdk/upstream/emscripten $PA
 # pyenv
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/marcos/google-cloud-sdk/path.fish.inc' ]; . '/Users/marcos/google-cloud-sdk/path.fish.inc'; end
