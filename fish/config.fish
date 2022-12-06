@@ -10,6 +10,8 @@ set PATH ~/bin $PATH
 
 # Aliases
 alias kubectl "env KUBECONFIG=(ls ~/.kube/configs/* | tr '\n' ':' | sed 's/:\$//g') kubectl"
+alias emasc emacs
+alias emcas emacs
 
 # Go shit
 set GOPATH ~/go
@@ -26,3 +28,6 @@ status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/marcos/google-cloud-sdk/path.fish.inc' ]; . '/Users/marcos/google-cloud-sdk/path.fish.inc'; end
+
+# Add Emacs to path
+set PATH $PATH /Applications/Emacs.app/Contents/MacOS/bin

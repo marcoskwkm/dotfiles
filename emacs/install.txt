@@ -1,0 +1,14 @@
+To isntall Emacs, it's better to build from source for performance.
+
+Last time https://github.com/jimeh/build-emacs-for-macos worked wonders.
+Just clone the repo, run
+`brew bundle`
+then
+`./build-emacs-for-macos emacs-28.2`
+This will generate a build in the /builds folder.
+
+After that, the app needs to be codesigned. Just run
+`codesign --force --deep -s - Emacs.app`
+Then copy the Emacs.app folder into the /Applications folder.
+
+It would be nice to have a script automatize this, but I'm too lazy.
