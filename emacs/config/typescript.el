@@ -23,6 +23,7 @@
                                  package-directory)))))))
 
 (defun mode-config ()
+  (setq lsp-idle-delay 0.2)
   (setq gc-cons-threshold (* 1024 1024 1024)) ;; 1GB
   (setq read-process-output-max (* 300 1024 1024)) ;; 300MB
   (setq web-mode-markup-indent-offset 2)

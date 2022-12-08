@@ -10,8 +10,6 @@ set PATH ~/bin $PATH
 
 # Aliases
 alias kubectl "env KUBECONFIG=(ls ~/.kube/configs/* | tr '\n' ':' | sed 's/:\$//g') kubectl"
-alias emasc emacs
-alias emcas emacs
 
 # Go shit
 set GOPATH ~/go
