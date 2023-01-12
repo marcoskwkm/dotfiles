@@ -37,6 +37,7 @@
   (setf (alist-get 'web-mode lsp--formatting-indent-alist) 'web-mode-code-indent-offset)
   (setq-local lsp-clients-typescript-server-args '("--stdio" "--tsserver-log-file" "/dev/stderr"))
   (setq-local lsp-clients-typescript-max-ts-server-memory 2048)
+  (setq-local lsp-javascript-completions-complete-function-calls nil)
   (lsp))
 
 (add-hook 'web-mode-hook (lambda ()
