@@ -39,10 +39,6 @@
 (global-set-key (kbd "M-k") 'hs-toggle-hiding)
 (global-set-key (kbd "M-s-j") 'ivy-immediate-done)
 
-;; Company (autocomplete)
-(setq company-idle-delay 0.01)
-(setq company-minimum-prefix-length 1)
-
 ;; Backups and autosaves
 (setq temporary-file-dir "~/.emacs.d/backups/")
 (setq

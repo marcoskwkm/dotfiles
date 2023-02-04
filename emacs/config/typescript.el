@@ -35,7 +35,7 @@
   (setq-local lsp-ui-doc-show-with-cursor t)
   (setq-local lsp-ui-sideline-enable nil)
   (setf (alist-get 'web-mode lsp--formatting-indent-alist) 'web-mode-code-indent-offset)
-  (setq-local lsp-clients-typescript-server-args '("--stdio" "--tsserver-log-file" "/dev/stderr"))
+  (setq-local lsp-clients-typescript-server-args '("--stdio"))
   (setq-local lsp-clients-typescript-max-ts-server-memory 2048)
   (setq-local lsp-javascript-completions-complete-function-calls nil)
   (setq-local lsp-restart 'auto-restart)
