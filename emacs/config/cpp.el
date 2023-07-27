@@ -15,6 +15,7 @@
 
 (add-hook 'c++-mode-hook
           (lambda ()
+            (setq-local lsp-clients-clangd-library-directories '("/usr", "/opt/homebrew/Cellar/gcc/13.1.0/include/c++/13/aarch64-apple-darwin22/bits"))
             (setup-clang-formatter)
             (setup-flycheck)))
 
