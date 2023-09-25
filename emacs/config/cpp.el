@@ -1,13 +1,12 @@
 (require 'flycheck)
 (require 'lsp)
 
-(setq-default flycheck-c/c++-gcc-executable "/usr/local/bin/gcc-9")
-(setq-default flycheck-gcc-language-standard "c++17")
+(setq-default flycheck-c/c++-gcc-executable "/opt/homebrew/bin/gcc-13")
+(setq-default flycheck-gcc-language-standard "c++20")
 (setq-default flycheck-disabled-checkers '(c/c++-clang))
 
 (defun setup-clang-formatter ()
-  (add-hook (make-local-variable 'before-save-hook)
-            'clang-format-buffer))
+  (when (eq major-mode 'c++-mode) 'clang-format-buffer))
 
 (defun setup-flycheck ()
   (flycheck-mode +1)
