@@ -6,7 +6,7 @@
 (setq-default flycheck-disabled-checkers '(c/c++-clang))
 
 (defun setup-clang-formatter ()
-  (when (eq major-mode 'c++-mode) 'clang-format-buffer))
+  (add-hook 'before-save-hook 'clang-format-buffer nil 'local))
 
 (defun setup-flycheck ()
   (flycheck-mode +1)

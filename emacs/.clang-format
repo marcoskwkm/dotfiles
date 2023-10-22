@@ -3,6 +3,7 @@ Language: Cpp
 ColumnLimit: 100
 IndentWidth: 4
 SpaceAfterTemplateKeyword: false
+AlignAfterOpenBracket: BlockIndent
 AlignTrailingComments: false
 AllowShortBlocksOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: Never
