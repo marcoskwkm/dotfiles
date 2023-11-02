@@ -3,7 +3,7 @@
 (setq-default indent-tabs-mode nil
               tab-width 4)
 (setq shell-command-switch "-lic")
-(global-linum-mode 1)
+(global-display-line-numbers-mode 1)
 (setq column-number-mode t)
 (global-hl-line-mode 1)
 (electric-indent-mode 1)
