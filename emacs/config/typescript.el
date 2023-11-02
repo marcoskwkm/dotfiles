@@ -26,6 +26,8 @@
   (setq-local lsp-clients-typescript-max-ts-server-memory 2048)
   (setq-local lsp-javascript-completions-complete-function-calls nil)
   (setq-local lsp-restart 'auto-restart)
+  (setq-local lsp-eslint-auto-fix-on-save t)
+  (add-hook 'before-save-hook 'lsp-eslint-fix-all nil 'local)
   (lsp))
 
 (add-hook 'web-mode-hook (lambda ()
@@ -33,5 +35,4 @@
                            (setup-lsp)
                            (yas-minor-mode)
                            (prettier-js-mode)
-                           (eslint-fix-auto-mode)
                            (add-node-modules-path)))
