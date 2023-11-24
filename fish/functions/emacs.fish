@@ -1,11 +1,10 @@
 function emacs
-  if not pgrep -f Emacs > /dev/null
-    command emacs $argv > /dev/null 2> /dev/null &; disown
+  if pgrep -f Emacs > /dev/null
+    emacsclient $argv &>/dev/null &; disown
   else
-    command emacsclient $argv &; disown
+    command emacs &>/dev/null $argv &; disown
+    sleep 0.5; open /Applications/Emacs.app
   end
-
-  open /Applications/Emacs.app
 end
 
 alias emasc emacs
