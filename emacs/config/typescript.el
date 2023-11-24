@@ -9,6 +9,7 @@
 (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
 
 (defun mode-config ()
+  (setq tab-width 2)
   (setq lsp-idle-delay 0.2)
   (setq gc-cons-threshold (* 1024 1024 1024)) ;; 1GB
   (setq read-process-output-max (* 300 1024 1024)) ;; 300MB

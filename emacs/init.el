@@ -97,9 +97,3 @@
    '(lsp-tailwindcss lsp-ui csharp-mode rainbow-mode dap-mode lsp-mode pyenv-mode xterm-color yaml-mode irony ivy elpy fzf ripgrep json-mode add-node-modules-path prettier-js flycheck web-mode tide tidal latex-preview-pane graphql-mode graphql go-guru exec-path-from-shell centered-cursor-mode ag))
  '(warning-suppress-log-types '((comp) (comp) (lsp-mode)))
  '(warning-suppress-types '((comp) (lsp-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

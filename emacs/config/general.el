@@ -1,7 +1,6 @@
 (ivy-mode 1)
 (setq inhibit-startup-message t)
-(setq-default indent-tabs-mode nil
-              tab-width 4)
+(setq indent-tabs-mode nil)
 (setq shell-command-switch "-lic")
 (global-display-line-numbers-mode 1)
 (setq column-number-mode t)
@@ -15,6 +14,8 @@
 (setq exec-path (append exec-path '("/usr/local/bin")))
 (global-auto-revert-mode t) ; Auto refreshes buffers on file change
 (electric-pair-mode 1) ; Auto close brackets
+(setq yas-global-mode t) ; Snippets
+(server-start) ; So we can use emacsclient and use one single Emacs instance
 
 ;; Delete trailing whitespaces on save
 (add-hook 'before-save-hook 'my-prog-nuke-trailing-whitespace)
