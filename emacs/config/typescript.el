@@ -17,7 +17,8 @@
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq web-mode-enable-auto-quoting nil)
-  (setq add-node-modules-path-command '("yarn bin")))
+  (setq add-node-modules-path-command '("yarn bin"))
+  (local-set-key (kbd "C-c C-s") 'yas-insert-snippet))
 
 (defun setup-lsp ()
   (setq-local lsp-ui-doc-show-with-cursor t)
