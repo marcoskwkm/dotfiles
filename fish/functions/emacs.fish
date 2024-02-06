@@ -1,10 +1,10 @@
 function emacs
   if pgrep -f Emacs > /dev/null
+    emacsclient --eval '(tab-bar-new-tab)'
     emacsclient $argv &>/dev/null &; disown
   else
-    command emacs &>/dev/null $argv &; disown
-    sleep 0.5; open /Applications/Emacs.app
-  end
+    open -a /Applications/Emacs.app $argv
+  end  
 end
 
 alias emasc emacs
