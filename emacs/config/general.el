@@ -1,6 +1,6 @@
 (ivy-mode 1)
 (setq inhibit-startup-message t)
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 (setq shell-command-switch "-lic")
 (global-display-line-numbers-mode 1)
 (setq column-number-mode t)
