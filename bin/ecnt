@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+# Opens given file in a new Emacs tab.
+# Assumes Emacs is already running.
+
+emacsclient --eval '(tab-bar-new-tab)' &>/dev/null
+emacsclient $@ &>/dev/null &
+disown
