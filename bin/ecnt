@@ -3,6 +3,11 @@
 # Opens given file in a new Emacs tab.
 # Assumes Emacs is already running.
 
-emacsclient --eval '(tab-bar-new-tab)' &>/dev/null
-emacsclient $@ &>/dev/null &
-disown
+if pgrep -f Emacs > /dev/null
+then
+    emacsclient --eval '(tab-bar-new-tab)' &>/dev/null
+    emacsclient $@ &>/dev/null &
+    disown
+else
+    open -a /Applications/Emacs.app $@
+fi
