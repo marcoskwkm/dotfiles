@@ -8,7 +8,7 @@
 (add-to-list 'auto-mode-alist '("\\.tsx?$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
 
-(defun mode-config ()
+(defun typescript--mode-config ()
   (setq tab-width 2)
   (setq lsp-idle-delay 0.2)
   (setq gc-cons-threshold (* 1024 1024 1024)) ;; 1GB
@@ -20,7 +20,7 @@
   (setq add-node-modules-path-command '("yarn bin"))
   (local-set-key (kbd "C-c C-s") 'yas-insert-snippet))
 
-(defun setup-lsp ()
+(defun typescript--setup-lsp ()
   (setq-local lsp-ui-doc-show-with-cursor t)
   (setq-local lsp-ui-sideline-enable nil)
   (setf (alist-get 'web-mode lsp--formatting-indent-alist) 'web-mode-code-indent-offset)
@@ -33,8 +33,8 @@
   (lsp))
 
 (add-hook 'web-mode-hook (lambda ()
-                           (mode-config)
-                           (setup-lsp)
+                           (typescript--mode-config)
+                           (typescript--setup-lsp)
                            (yas-minor-mode)
                            (prettier-js-mode)
                            (add-node-modules-path)))
