@@ -1,4 +1,4 @@
-To isntall Emacs, it's better to build from source for performance.
+To install Emacs, it's better to build from source for performance.
 
 Last time https://github.com/jimeh/build-emacs-for-macos worked wonders.
 Just clone the repo, run

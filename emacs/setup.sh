@@ -24,5 +24,9 @@ if [ ! -d "$CONFIG_DST/unity" ]; then
     cd "$CONFIG_DST"
     git clone git@github.com:elizagamedev/unity.el unity
 fi
+if [ ! -d "$CONFIG_DST/copilot" ]; then
+    cd "$CONFIG_DST"
+    git clone git@github.com:copilot-emacs/copilot.el copilot
+fi
 
 success "Finished configuring emacs."
