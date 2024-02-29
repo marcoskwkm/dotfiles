@@ -3,7 +3,7 @@
 
 (require 'copilot)
 
-(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "C-<return>") 'copilot-accept-completion)
 (setq copilot-indent-offset-warning-disable t)
 
 (add-hook 'prog-mode-hook 'copilot-mode)
