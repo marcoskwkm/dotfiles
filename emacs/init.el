@@ -1,3 +1,6 @@
+;; Increase GC threshold to improve performance
+(setq gc-cons-threshold (* 1024 1024 1024)) ;; 1 GB
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ;; Package managing ;;
 ;;;;;;;;;;;;;;;;;;;;;;

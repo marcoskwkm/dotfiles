@@ -11,7 +11,6 @@
 (defun typescript--mode-config ()
   (setq tab-width 2)
   (setq lsp-idle-delay 0.2)
-  (setq gc-cons-threshold (* 1024 1024 1024)) ;; 1GB
   (setq read-process-output-max (* 300 1024 1024)) ;; 300MB
   (setq web-mode-markup-indent-offset 2)
   (setq web-mode-css-indent-offset 2)
