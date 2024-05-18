@@ -15,7 +15,6 @@
 (global-auto-revert-mode t) ; Auto refreshes buffers on file change
 (electric-pair-mode 1) ; Auto close brackets
 (setq yas-global-mode t) ; Snippets
-(server-start) ; So we can use emacsclient and use one single Emacs instance
 (setq garbage-collection-messages t) ; Show garbage collection messages
 
 ;; Delete trailing whitespaces on save

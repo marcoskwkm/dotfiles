@@ -1,5 +1,5 @@
 function emacs
-  command ecnt $argv
+  command emacs $argv
 end
 
 alias emasc emacs
