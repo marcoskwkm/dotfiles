@@ -109,5 +109,9 @@ function fish_prompt --description 'Write out the prompt'
       set vtex ' ['(prompt_vtex)']'
     end
 
-    echo -n -s (set_color $color_cwd) (prompt_pwd) $normal (__fish_git_prompt) $normal $vtex $prompt_status "$mode_str" "> "
+    if [ "$(arch)" = "i386" ]
+      set cur_arch ' (x86)'
+    end
+
+    echo -n -s (set_color $color_cwd) (prompt_pwd) $normal $cur_arch (__fish_git_prompt) $normal $vtex $prompt_status "$mode_str" "> "
 end
