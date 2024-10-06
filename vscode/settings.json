@@ -1,0 +1,59 @@
+{
+  "[cpp][java]": {
+    "editor.tabSize": 4
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.largeFileOptimizations": false,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "eslint.format.enable": true,
+  "explorer.fileNesting.patterns": {
+    "*.db": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.s3db": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.ts": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1",
+    "Q_NEW_SESSION": "1"
+  },
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "One Monokai",
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
+  "window.confirmSaveUntitledWorkspace": false,
+  "[cpp]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.default.compilerPath": "/opt/homebrew/bin/gcc-13",
+  "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
+  "C_Cpp.default.cppStandard": "c++23",
+  "debug.onTaskErrors": "abort",
+  "makefile.configureOnOpen": false,
+  "cmake.showOptionsMovedNotification": false
+}

@@ -31,6 +31,10 @@ info "Creating symlink for keybindings.json..."
 
 symlink "$CONFIG_SRC/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 
+info "Creating symlink for keybindings.json..."
+
+symlink "$CONFIG_SRC/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+
 info "Installing extensions..."
 for ext in "${EXTENSIONS[@]}"; do
     code --install-extension $ext
