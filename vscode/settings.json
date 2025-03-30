@@ -55,5 +55,7 @@
   "C_Cpp.default.cppStandard": "c++23",
   "debug.onTaskErrors": "abort",
   "makefile.configureOnOpen": false,
-  "cmake.showOptionsMovedNotification": false
+  "cmake.showOptionsMovedNotification": false,
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "C_Cpp.default.compilerArgs": ["-std=c++23"]
 }

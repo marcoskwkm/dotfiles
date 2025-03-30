@@ -29,3 +29,6 @@ if [ -f '/Users/marcos/google-cloud-sdk/path.fish.inc' ]; . '/Users/marcos/googl
 
 # Add Emacs to path
 set PATH $PATH /Applications/Emacs.app/Contents/MacOS/bin
+
+# Created by `pipx` on 2025-03-27 13:18:11
+set PATH $PATH /Users/marcos/.local/bin
