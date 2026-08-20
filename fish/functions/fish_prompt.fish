@@ -1,21 +1,3 @@
-function parse_vtex_json
-  cat $HOME/.config/configstore/vtex.json | grep $argv[1] | sed -n 's/.*\:.*\"\(.*\)\".*/\1/p'
-end
-
-function get_vtex_account
-  parse_vtex_json account
-end
-
-function get_vtex_workspace
-  parse_vtex_json workspace
-end
-
-function prompt_vtex
-  if test (get_vtex_workspace 2> /dev/null)
-    echo (get_vtex_account)/(get_vtex_workspace)
-  end
-end
-
 function fish_prompt --description 'Write out the prompt'
 	set -l last_status $status
 
@@ -104,10 +86,6 @@ function fish_prompt --description 'Write out the prompt'
 			set_color normal
 		)
 	end
-
-	if test (prompt_vtex)
-      set vtex ' ['(prompt_vtex)']'
-    end
 
     if [ "$(arch)" = "i386" ]
       set cur_arch ' (x86)'

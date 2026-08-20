@@ -1,13 +1,13 @@
 {
   "[cpp][java]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
+    "editor.defaultFormatter": "Prisma.prisma",
   },
   "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
@@ -29,7 +29,7 @@
     "*.ts": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
-    "tsconfig.json": "tsconfig.*.json"
+    "tsconfig.json": "tsconfig.*.json",
   },
   "git.openRepositoryInParentFolders": "never",
   "github.copilot.editor.enableAutoCompletions": true,
@@ -37,7 +37,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1",
-    "Q_NEW_SESSION": "1"
+    "Q_NEW_SESSION": "1",
   },
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "window.commandCenter": false,
@@ -48,7 +48,7 @@
   "window.confirmSaveUntitledWorkspace": false,
   "[cpp]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-vscode.cpptools"
+    "editor.defaultFormatter": "ms-vscode.cpptools",
   },
   "C_Cpp.default.compilerPath": "/opt/homebrew/bin/gcc-13",
   "C_Cpp.default.intelliSenseMode": "macos-gcc-arm64",
@@ -57,5 +57,7 @@
   "makefile.configureOnOpen": false,
   "cmake.showOptionsMovedNotification": false,
   "javascript.preferences.importModuleSpecifierEnding": "minimal",
-  "C_Cpp.default.compilerArgs": ["-std=c++23"]
+  "C_Cpp.default.compilerArgs": ["-std=c++23"],
+  "claudeCode.preferredLocation": "panel",
+  "svelte.enable-ts-plugin": true,
 }
