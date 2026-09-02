@@ -33,6 +33,7 @@ brew 'tree'
 brew 'fzf'
 brew 'ripgrep'
 brew 'clang-format'
+brew 'diffnav'
 
 cask 'java8'
 cask 'the-unarchiver'

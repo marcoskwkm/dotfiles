@@ -7,3 +7,5 @@
 
 # OS X shit
 .DS_Store
+
+**/.claude/settings.local.json

@@ -26,3 +26,5 @@
 	autosetupmerge = always
 [init]
 	defaultBranch = main
+[pager]
+	diff = diffnav
